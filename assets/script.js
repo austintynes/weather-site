@@ -30,4 +30,22 @@ document.addEventListener("DOMContentLoaded", function () {
       getweatherData(city);
     }
   });
+
+  // Fetches weather data from OpenWeatherMap API
+  function getWeatherData(city) {
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric')
+        .then(response => response.json()) // Parse the JSON response from API
+        .then(data => {
+            displayWeatherData(data); // Calls function to display data
+            saveToHistory(city) // Calls function to save the city to search history
+        })
+        .catch(error => console.error(error)); // Handles errors
+  }
+  // Displays the weather data specified
+  function displayWeatherData(data) {
+
+
+  }
+
+
 });
