@@ -3,21 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/style.css" />
     <title>Weather Tracker</title>
   </head>
   <body>
-    <div class="container">
+    <header>
       <h1>Weather Tracker</h1>
-      <div class="search-container">
-        <input type="text" name="city-input" id="Enter city" />
-        <button id="search-btn">Search</button>
+    </header>
+    <div class="d-flex flex row" class="container-fluid">
+      <div>
+        <aside d-flex flex column class="col-sm-9" class="col-md-6" class="col-lg-3">
+          <h2>Search for a City</h2>
+          <div class="search-container">
+            <input
+              type="text"
+              name="city-input"
+              id="Enter City"
+              class="form-control"
+            />
+            <button id="search-btn" class="btn btn-primary mt-2">Search</button>
+          </div>
+          <div class="history-container mt-3">
+            <h4>Search History</h4>
+            <ul id="history-list"></ul>
+          </div>
+        </aside>
+        <div class col-md-9>
+          <div class="weather-container" id="weather-container"></div>
+        </div>
       </div>
-      <div class="history-container">
-        <h2>Searh History</h2>
-        <ul id="history-list"></ul>
-      </div>
-      <div class="weather-container" id="weather-container"></div>
     </div>
 
     <script src="./assets/script.js"></script>
