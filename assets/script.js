@@ -1,51 +1,43 @@
-// Waits for all DOM elements to load before executing
-document.addEventListener("DOMContentLoaded", function () {
-  // API key
-  const APIkey = "10253967aeb21b7d078f9ef409a75de7";
+const API_KEY = "10253967aeb21b7d078f9ef409a75de7";
+const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 
-  // Gets DOM elements
-  const searchBtn = document.getElementById("search-btn");
-  const cityInput = document.getElementById("city-input");
-  const historyList = document.getElementById("history-list");
-  const weatherContainer = document.getElementById("weather-container");
+const cityForm = document.getElementById("city-form");
+const cityInput = document.getElementById("city-input");
+const searchHistory = document.getElementById("search-history");
+const currentWeatherDiv = document.getElementById("current-weather");
+const forecastDiv = document.getElementById("forecast");
 
-  // Adds event listener to the search button
-  searchBtn.addEventListener("click", function () {
-    // Gets the city input value
-    const city = cityInput.value;
-    // Checks to see if the input is not empty
-    if (city) {
-      // Call function to get weather data for city
-      getWeatherData(city);
-    }
-  });
+cityForm.addEventListener("submit", function (event) {
+  const cityName = cityInput.value.trim();
+  var queryURL =
+    "http://api.openweathermap.org/data/2.5/weather?q=" +
+    cityName +
+    "&appid=" +
+    API_KEY;
+  event.preventDefault();
 
-  // Adds event listener to history list
-  historyList.addEventListener("click", function (event) {
-    // Checks if item was clicked
-    if (event.target.classList.contains("history-item")) {
-      // Get the text content of clicked city in history
-      const city = event.target.textContent;
-      // Call function to get weather for clicked city in history
-      getweatherData(city);
-    }
-  });
+  if (cityName === "") return;
 
-  // Fetches weather data from OpenWeatherMap API
-  function getWeatherData(city) {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric')
-        .then(response => response.json()) // Parse the JSON response from API
-        .then(data => {
-            displayWeatherData(data); // Calls function to display data
-            saveToHistory(city) // Calls function to save the city to search history
-        })
-        .catch(error => console.error(error)); // Handles errors
-  }
-  // Displays the weather data specified
-  function displayWeatherData(data) {
-
-
-  }
-
-
+  // Fetch current weather
+  fetch(queryURL)
+    .then((response) => response.json())
+    .then((data) => {
+      // Display current weather
+      //         displayCurrentWeather(data);
+      // Fetch 5-day forecast
+      console.log(data);
+      return;
+    })
+    .then((response) => response.json())
+    /*       .then(data => {
+            // Display 5-day forecast
+            displayForecast(data);
+            // Save search history in localStorage
+            saveToLocalStorage(cityName);
+            // Render search history
+            renderSearchHistory();
+        })*/
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
 });
