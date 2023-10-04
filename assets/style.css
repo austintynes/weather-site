@@ -1,29 +1,29 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+display: flex;
+flex-direction: column;
+justify-content: center;
+    
 }
 
 header {
-   background-color: black;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-.history-container {
-    height: 30vh;
-}
-.weather-containerLg {
+main {}
+#current-weather {
+    width: 50vw;
+    background-color: antiquewhite;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
-.weather-containerSm {
-    border: black solid 1px;
-    height: 20vh;
-    margin: 2px;
-    margin-left: 30px;
-    width: 80vw;
-}
-
-#fiveDay {
-    margin-top: 20px;
-    justify-self: center;
-    align-items: center;
+.form-control {
+width: 20vw;
+text-align: center;
 }
