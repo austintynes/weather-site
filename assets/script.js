@@ -1,11 +1,11 @@
 const API_KEY = "10253967aeb21b7d078f9ef409a75de7";
 const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 
-const cityForm = document.getElementById("city-form");
-const cityInput = document.getElementById("city-input");
-const searchHistory = document.getElementById("search-history");
-const currentWeather = document.getElementById("current-weather");
-const forecast = document.getElementById("forecast");
+const cityForm = document.querySelector(".city-form");
+const cityInput = document.querySelector("#city-input");
+const searchHistory = document.querySelector("#search-history");
+const currentWeather = document.querySelector("#current-weather");
+const forecast = document.querySelector("#forecast");
 
 cityForm.addEventListener("submit", function (event) {
   let cityName = cityInput.value.trim();
@@ -25,10 +25,10 @@ cityForm.addEventListener("submit", function (event) {
     .then((data) => {
       // Display current weather
 
-      document.querySelector(".city-name").textContent = data.name;
-      document.querySelector(".temp").textContent = data.main.temp;
-      document.querySelector(".wind").textContent = data.wind.speed;
-      document.querySelector(".humidity").textContent = data.main.humidity;
+      document.querySelector(".city-name").textContent = "City: " + data.name;
+      document.querySelector(".temp").textContent = "Temperature: " + data.main.temp + "°F";
+      document.querySelector(".wind").textContent = "Wind speed: " + data.wind.speed + "mph";
+      document.querySelector(".humidity").textContent = "Humidity: " + data.main.humidity + "%";
 
       console.log(data);
       return;
@@ -51,25 +51,27 @@ cityForm.addEventListener("submit", function (event) {
       // Display current weather
       //         displayCurrentWeather(data);
       // Fetch 5-day forecast
-      document.querySelector(".temp1").textContent = data.list[3].main.temp;
-      document.querySelector(".wind1").textContent = data.list[3].wind.speed;
-      document.querySelector(".humidity1").textContent = data.list[3].main.humidity;
+      document.querySelector(".temp1").textContent = "Temperature: " + data.list[3].main.temp + "°F";
+      document.querySelector(".wind1").textContent =  "Wind speed: " + data.list[3].wind.speed + "mph";
+      document.querySelector(".humidity1").textContent = "Humidity: " + data.list[3].main.humidity + "%";
 
-      document.querySelector(".temp2").textContent = data.list[11].main.temp;
-      document.querySelector(".wind2").textContent = data.list[11].wind.speed;
-      document.querySelector(".humidity2").textContent = data.list[11].main.humidity;
+      document.querySelector(".temp2").textContent = "Temperature: " + data.list[11].main.temp + "°F";
+      document.querySelector(".wind2").textContent =  "Wind speed: " + data.list[11].wind.speed + "mph";
+      document.querySelector(".humidity2").textContent = "Humidity: " + data.list[11].main.humidity + "%";
 
-      document.querySelector(".temp3").textContent = data.list[19].main.temp;
-      document.querySelector(".wind3").textContent = data.list[19].wind.speed;
-      document.querySelector(".humidity3").textContent = data.list[19].main.humidity;
+      document.querySelector(".temp3").textContent = "Temperature: " + data.list[19].main.temp + "°F";
+      document.querySelector(".wind3").textContent =  "Wind speed: " + data.list[19].wind.speed + "mph";
+      document.querySelector(".humidity3").textContent = "Humidity: " + data.list[19].main.humidity + "%";
 
-      document.querySelector(".temp4").textContent = data.list[27].main.temp;
-      document.querySelector(".wind4").textContent = data.list[27].wind.speed;
-      document.querySelector(".humidity4").textContent = data.list[27].main.humidity;
+      document.querySelector(".temp4").textContent = "Temperature: " + data.list[27].main.temp + "°F";
+      document.querySelector(".wind4").textContent =  "Wind speed: " + data.list[27].wind.speed + "mph";
+      document.querySelector(".humidity4").textContent = "Humidity: " + data.list[27].main.humidity + "%";
 
-      document.querySelector(".temp5").textContent = data.list[35].main.temp;
-      document.querySelector(".wind5").textContent = data.list[35].wind.speed;
-      document.querySelector(".humidity5").textContent = data.list[35].main.humidity;
+      document.querySelector(".temp5").textContent = "Temperature: " + data.list[35].main.temp + "°F";
+      document.querySelector(".wind5").textContent =  "Wind speed: " + data.list[35].wind.speed + "mph";
+      document.querySelector(".humidity5").textContent = "Humidity: " + data.list[35].main.humidity + "%";
+
+      
 
       console.log(data);
       return;
