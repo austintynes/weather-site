@@ -1,126 +1,117 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-display: flex;
-flex-direction: column;
-justify-content: center;
-flex-wrap: wrap;
-    
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 header {
-    background-color: aqua;
-    margin: 2px;
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  background-color: aqua;
+  margin: 2px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .form-container {
-    
-    width: max-content;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .form-label {
-    text-align: center;
-    
+  text-align: center;
 }
 .city-form {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-
 #current-weather {
-    width: 50vw;
-    font-size: larger;
-    font-weight: bolder ;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
+  width: 50vw;
+  font-size: larger;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .currWeatherData {
-   
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .city-name {
-    background-color: cadetblue;
-   text-align: center;
+  background-color: cadetblue;
+  text-align: center;
 }
 
 #forecast-card {
-    font-weight: bolder;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: max-content;
-    height:min-content;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    background-color: beige;
-    flex-wrap: wrap;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  height: min-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: beige;
+  flex-wrap: wrap;
 }
-
 
 .form-control {
-width: 15vw;
-text-align: center;
+  width: 15vw;
+  text-align: center;
 }
 .forecast-title {
-display: flex;
-flex-direction: row;
-justify-content: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 #forecast {
-    position: relative;
-    left: 7%;
-    width: 90vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+  position: relative;
+  left: 7%;
+  width: 90vw;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .formCurrWeather {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .form-container {
-    position: absolute;
-    left: 20px;
+  position: absolute;
+  left: 20px;
 }
-
